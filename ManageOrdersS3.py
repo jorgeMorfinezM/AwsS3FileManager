@@ -3,9 +3,9 @@
 Requires Python 3.6 or later
 """
 
-__author__ = "Jorge Morfinez Mojica (jorgemorfinez@ofix.mx)"
+__author__ = "Jorge Morfinez Mojica (jorge.morfinez.m@gmail.com)"
 __copyright__ = "Copyright 2020, Jorge Morfinez Mojica"
-__license__ = "Ofix S.A. de C.V."
+__license__ = ""
 __history__ = """ Se conecta, valida y copia 
                   documentos/archivos a un 
                   Bucket de AWS S3 a partir 
@@ -39,7 +39,6 @@ def connect_aws_s3():
     bucketname = bucket_s3_name
 
     s3 = boto3.resource('s3', aws_access_key_id=s3_access_key, aws_secret_access_key=s3_secret_key)
-    # s3.Bucket(bucketname).upload_file(filename, '/home/ubuntu/environment/ordersS3Uploader/Order-12630.xml')
 
     bucket_pedidos = s3.Bucket(bucketname)
 
@@ -189,8 +188,8 @@ def main():
 
     parser = argparse.ArgumentParser()
 
-    parser.add_argument('--order_type', required=False, type=str,
-                        help="Parametro Tipo de Orden B2C o B2B entre comillas")
+    parser.add_argument('--file_type', required=False, type=str,
+                        help="Parametro Tipo de archivos")
 
     args = parser.parse_args()
 
