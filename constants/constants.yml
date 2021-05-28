@@ -5,7 +5,6 @@ BUCKET_AWS_S3:
   S3_NAME: 'name_of_bucket_in_s3'
   ACCESS_KEY: 'access_key_from_aws_console'
   SECRET_KEY: 'secret_key_from_aws_console'
-  # PATH_BACKUP_PEDIDOS: '/pedidosBackup/'
 
 LOG_RESOURCE:
   FILE_EXTENSION: '.log'
@@ -19,4 +18,3 @@ PATH_LOCAL: '../ManageS3Files/resources'
 EXT_ORDERS_TV: '*.xml'
 
 PATH_ORDERS_B2B: '' 
-# PATH_ORDERS_B2B_BACK: '/pedidosb2bBk/'
